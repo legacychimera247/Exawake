@@ -1,6 +1,6 @@
 Name:       exawake
 Summary:    Exawake
-Version:    1.0
+Version:    1.1
 Release:    1
 Group:      Qt/Qt
 License:    COPYING
@@ -19,28 +19,14 @@ Simple Wake-on-lan app
 %prep
 %setup -q -n %{name}-%{version}
 
-# >> setup
-# << setup
-
 %build
-# >> build pre
-# << build pre
-
 %qmake5 
 
 make %{?_smp_mflags}
 
-# >> build post
-# << build post
-
 %install
 rm -rf %{buildroot}
-# >> install pre
-# << install pre
 %qmake5_install
-
-# >> install post
-# << install post
 
 desktop-file-install --delete-original       \
   --dir %{buildroot}%{_datadir}/applications             \
@@ -52,5 +38,3 @@ desktop-file-install --delete-original       \
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/icons/hicolor/*/apps/%{name}.png
-# >> files
-# << files

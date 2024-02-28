@@ -77,6 +77,8 @@ void WOLModel::editServer(int index, QString name, QString mac, QString broadcas
     server.broadcast = broadcast;
     server.port = port;
     saveServers();
+
+    emit dataChanged(createIndex(index, 0), createIndex(index, 0));
 }
 
 void WOLModel::wakeUpServer(int index)

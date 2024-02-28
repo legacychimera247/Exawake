@@ -8,5 +8,5 @@ ApplicationWindow
     initialPage: Component { Main { } }
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: defaultAllowedOrientations
-    property string version: "1.0"
+    property string version: "1.1"
 }

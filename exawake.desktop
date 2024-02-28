@@ -4,4 +4,6 @@ X-Nemo-Application-Type=silica-qt5
 Icon=exawake
 Exec=exawake
 Name=Exawake
-#Name[de]=exowake
+
+[X-Sailjail]
+Sandboxing=Disabled
